@@ -404,21 +404,21 @@ ul, ol {
 }
 
 .nav-island {
-  max-width: 1150px;
+  max-width: 1100px;
   margin: 0 auto;
-  background-color: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(24px) saturate(150%);
+  -webkit-backdrop-filter: blur(24px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.08);
   border-radius: 999px;
-  height: clamp(74px, 8vw, 84px);
-  padding: 0.5rem 0.65rem 0.5rem 1.75rem;
+  height: 64px;
+  padding: 0.3rem 0.4rem 0.3rem 1.4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   pointer-events: auto;
-  transition: transform var(--duration-fast) var(--ease-spring), background-color var(--duration-fast) var(--ease-out), box-shadow var(--duration-fast) var(--ease-out);
+  transition: transform var(--duration-fast) var(--ease-spring);
 }
 
 .brand-wrapper {
@@ -428,26 +428,26 @@ ul, ol {
 
 .brand-name {
   font-family: var(--font-serif);
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   font-weight: 600;
   letter-spacing: -0.015em;
-  color: var(--color-noir);
-  line-height: 1.2;
+  color: #12100F;
+  line-height: 1.1;
 }
 
 .brand-sub {
-  font-size: 0.58rem;
+  font-size: 0.52rem;
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
   color: #554A44;
   font-weight: 700;
-  margin-top: 3px;
+  margin-top: 1px;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.75rem;
 }
 
 .nav-link {
@@ -665,14 +665,14 @@ ul, ol {
   display: block;
 }
 
-/* Gradiente na borda esquerda da foto para fundir com o fundo escuro */
+/* Gradiente na borda esquerda da foto para fundir com o fundo escuro (e esconder o texto original da imagem) */
 .hero-image-gradient {
   position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
-  width: 40%;
-  background: linear-gradient(to right, #12100F 0%, rgba(18, 16, 15, 0.6) 50%, transparent 100%);
+  width: 70%;
+  background: linear-gradient(to right, #12100F 0%, #12100F 40%, rgba(18, 16, 15, 0.8) 65%, transparent 100%);
   pointer-events: none;
 }
 
@@ -686,15 +686,10 @@ ul, ol {
 /* === PAINEL EDITORIAL === */
 .hero-content {
   width: 100%;
-  max-width: 540px;
-  background: rgba(20, 17, 15, 0.82);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.13);
-  border-radius: 28px;
-  padding: clamp(2.5rem, 4vw, 3.5rem) clamp(2.5rem, 4vw, 3rem);
-  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1), 0 24px 64px rgba(0, 0, 0, 0.4);
-  margin-top: 40px;
+  max-width: 520px;
+  margin-top: 50px;
+  position: relative;
+  z-index: 10;
 }
 
 /* === EYEBROW LABEL === */
@@ -1855,11 +1850,11 @@ ul, ol {
   /* No mobile o fade vai pra baixo para revelar rosto em cima e fundir com o painel abaixo */
   .hero-image-gradient {
     width: 100%;
-    height: 45%;
+    height: 70%;
     top: auto;
     bottom: 0;
     left: 0;
-    background: linear-gradient(to bottom, transparent 0%, #12100F 100%);
+    background: linear-gradient(to bottom, transparent 0%, rgba(18, 16, 15, 0.9) 45%, #12100F 100%);
   }
 
   .hero-bg-img {
@@ -1868,16 +1863,16 @@ ul, ol {
 
   .hero-content {
     position: relative;
-    width: calc(100% - 28px);
+    width: 100%;
     max-width: 100%;
-    margin: 0 auto;
+    margin: 0;
     left: 0;
     top: auto;
     transform: none;
-    margin-top: -65px; /* Sobrepor parcialmente a foto */
-    padding: 2.2rem 1.6rem;
+    margin-top: -60px;
+    padding: 0;
     z-index: 10;
-    background: rgba(20, 17, 15, 0.85);
+    background: transparent;
   }
 
   .hero-headline {

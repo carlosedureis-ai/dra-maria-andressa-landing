@@ -284,7 +284,7 @@ ul, ol {
   width: 2.6rem;
   height: 2.6rem;
   border-radius: 50%;
-  background: var(--color-champagne);
+  background-color: var(--color-champagne);
   color: #FFFFFF;
   display: flex;
   align-items: center;
@@ -319,7 +319,7 @@ ul, ol {
 }
 
 .btn-whatsapp .btn-icon-circle {
-  background: rgba(255, 255, 255, 0.22);
+  background-color: rgba(255, 255, 255, 0.22);
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -330,7 +330,7 @@ ul, ol {
   }
 
   .btn-whatsapp:hover .btn-icon-circle {
-    background: rgba(255, 255, 255, 0.32);
+    background-color: rgba(255, 255, 255, 0.32);
     transform: translate(3px, -1px) scale(1.05);
   }
 }
@@ -339,7 +339,7 @@ ul, ol {
    6. DOUBLE-BEZEL (DOPPELRAND) NESTED CARD ARCHITECTURE
    -------------------------------------------------------------------------- */
 .bezel-outer {
-  background: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(182, 141, 115, 0.2);
   border-radius: var(--radius-outer);
   padding: 0.5rem;
@@ -364,7 +364,7 @@ ul, ol {
 }
 
 .bezel-inner {
-  background: var(--color-surface);
+  background-color: var(--color-surface);
   border-radius: var(--radius-inner);
   padding: clamp(1.85rem, 3.2vw, 2.6rem);
   border: 1px solid rgba(23, 20, 18, 0.04);
@@ -375,7 +375,7 @@ ul, ol {
 }
 
 .bezel-dark-outer {
-  background: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-outer);
   padding: 0.5rem;
@@ -383,7 +383,7 @@ ul, ol {
 }
 
 .bezel-dark-inner {
-  background: #201C1A;
+  background-color: #201C1A;
   border-radius: var(--radius-inner);
   border: 1px solid rgba(255, 255, 255, 0.06);
   box-shadow: var(--inset-dark-bevel);
@@ -406,7 +406,7 @@ ul, ol {
 .nav-island {
   max-width: 1080px;
   margin: 0 auto;
-  background: var(--color-surface-translucent);
+  background-color: var(--color-surface-translucent);
   backdrop-filter: blur(28px) saturate(190%);
   -webkit-backdrop-filter: blur(28px) saturate(190%);
   border: 1px solid rgba(255, 255, 255, 0.75);
@@ -585,96 +585,126 @@ ul, ol {
 .mobile-drawer.open .mobile-drawer-link:nth-child(5) { transition-delay: 280ms; }
 
 /* --------------------------------------------------------------------------
-   8. SECTION 1: HERO SECTION
+   8. SECTION 1: IMMERSIVE HERO SECTION (BACKGROUND PHOTO + TEXT OVERLAY)
    -------------------------------------------------------------------------- */
 .hero-section {
-  padding-top: clamp(8rem, 15vw, 11rem);
-  padding-bottom: clamp(4.5rem, 8.5vw, 7.5rem);
-  min-height: 92dvh;
+  position: relative;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
-  position: relative;
+  overflow: hidden;
+  padding-top: clamp(7.5rem, 13vw, 9.5rem);
+  padding-bottom: clamp(4.5rem, 8.5vw, 6.5rem);
+  background-color: #12100E;
+}
+
+.hero-bg-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
   overflow: hidden;
 }
 
-.hero-glow-bg {
-  position: absolute;
-  top: 5%;
-  right: -5%;
-  width: 650px;
-  height: 650px;
-  background: radial-gradient(circle, rgba(182, 141, 115, 0.2) 0%, rgba(236, 226, 216, 0.08) 50%, transparent 70%);
-  pointer-events: none;
-  filter: blur(70px);
-  z-index: 0;
+.hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 78% 18%;
+  filter: brightness(0.9) contrast(1.05);
 }
 
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.18fr 0.82fr;
-  gap: clamp(2rem, 5.5vw, 5rem);
-  align-items: center;
-  position: relative;
+.hero-scrim-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(18, 16, 14, 0.96) 0%,
+    rgba(18, 16, 14, 0.85) 45%,
+    rgba(18, 16, 14, 0.45) 75%,
+    rgba(18, 16, 14, 0.2) 100%
+  );
   z-index: 1;
 }
 
+.hero-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
 .hero-content {
+  max-width: 660px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.hero-prof-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.84rem;
-  font-weight: 600;
-  color: var(--color-champagne-dark);
-  margin-bottom: 1.1rem;
-  letter-spacing: 0.04em;
+.hero-eyebrow {
+  background: rgba(182, 141, 115, 0.2);
+  border-color: rgba(182, 141, 115, 0.38);
+  color: var(--color-champagne-light);
+  margin-bottom: 1.25rem;
 }
 
 .hero-headline {
   font-family: var(--font-serif);
-  font-size: clamp(2.5rem, 5.2vw, 4.4rem);
+  font-size: clamp(2.4rem, 5.2vw, 4.4rem);
   line-height: 1.08;
   font-weight: 500;
   letter-spacing: -0.03em;
-  color: var(--color-noir);
-  margin-bottom: 1.35rem;
+  color: #FFFFFF;
+  margin-bottom: 1.25rem;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+}
+
+.hero-headline .italic-accent {
+  color: var(--color-champagne-light);
 }
 
 .hero-tagline {
   font-family: var(--font-serif);
-  font-size: clamp(1.25rem, 2.3vw, 1.6rem);
-  color: var(--color-champagne-dark);
+  font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+  color: var(--color-champagne-light);
   line-height: 1.35;
-  margin-bottom: 1.35rem;
+  margin-bottom: 1.25rem;
   font-weight: 400;
 }
 
 .hero-subheadline {
-  font-size: clamp(1.02rem, 1.45vw, 1.12rem);
-  color: rgba(23, 20, 18, 0.76);
+  font-size: clamp(1rem, 1.45vw, 1.12rem);
+  color: rgba(251, 248, 244, 0.85);
   line-height: 1.7;
-  max-width: 530px;
+  max-width: 540px;
   margin-bottom: 2.25rem;
 }
 
-.hero-cta-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.9rem;
-  width: 100%;
+.hero-btn-whatsapp {
+  background: linear-gradient(135deg, var(--color-champagne) 0%, #9A7259 100%);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 12px 32px -4px rgba(182, 141, 115, 0.45), var(--inset-bevel);
+}
+
+.hero-btn-whatsapp .btn-icon-circle {
+  background-color: #171412;
+  color: #FFFFFF;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hero-btn-whatsapp:hover {
+    background: linear-gradient(135deg, #C69D83 0%, #8A644D 100%);
+    box-shadow: 0 18px 42px -4px rgba(182, 141, 115, 0.55);
+  }
 }
 
 .hero-microcopy {
   display: flex;
   align-items: center;
   gap: 0.55rem;
-  font-size: 0.8rem;
-  color: rgba(23, 20, 18, 0.62);
+  font-size: 0.82rem;
+  color: rgba(251, 248, 244, 0.75);
   font-weight: 500;
 }
 
@@ -684,85 +714,6 @@ ul, ol {
   background-color: var(--color-whatsapp-badge);
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(37, 211, 102, 0.7);
-}
-
-.hero-image-wrapper {
-  position: relative;
-}
-
-.hero-image-bezel {
-  position: relative;
-  border-radius: 42px;
-  padding: 0.7rem;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(236, 226, 216, 0.45) 100%);
-  border: 1px solid rgba(182, 141, 115, 0.32);
-  box-shadow: var(--shadow-float);
-}
-
-.hero-image-container {
-  position: relative;
-  border-radius: 34px;
-  overflow: hidden;
-  aspect-ratio: 4 / 5.2;
-  background-color: #201C1A;
-}
-
-.hero-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  transition: transform var(--duration-reveal) var(--ease-spring);
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .hero-image-bezel:hover .hero-img {
-    transform: scale(1.03);
-  }
-}
-
-.hero-floating-pill {
-  position: absolute;
-  bottom: 1.5rem;
-  left: 1.5rem;
-  right: 1.5rem;
-  background: rgba(23, 20, 18, 0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: var(--radius-inner);
-  padding: 1rem 1.35rem;
-  color: #FFFFFF;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
-}
-
-.hero-floating-pill-icon {
-  width: 2.3rem;
-  height: 2.3rem;
-  border-radius: 50%;
-  background: rgba(182, 141, 115, 0.28);
-  border: 1px solid var(--color-champagne);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-champagne-light);
-  flex-shrink: 0;
-}
-
-.hero-floating-pill-text {
-  font-size: 0.84rem;
-  line-height: 1.35;
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.hero-floating-pill-text strong {
-  display: block;
-  font-weight: 600;
-  color: #FFFFFF;
-  font-size: 0.92rem;
 }
 
 /* --------------------------------------------------------------------------
@@ -1759,23 +1710,11 @@ ul, ol {
    22. RESPONSIVE BREAKPOINTS (MOBILE-FIRST POLISH)
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
-  .hero-grid,
   .philosophy-grid,
   .about-grid,
   .clinic-grid {
     grid-template-columns: 1fr;
     gap: 3.25rem;
-  }
-
-  .hero-content {
-    order: 1;
-  }
-
-  .hero-image-wrapper {
-    order: 2;
-    max-width: 480px;
-    margin: 0 auto;
-    width: 100%;
   }
 
   .pillars-grid,
@@ -1815,8 +1754,62 @@ ul, ol {
     padding: 0.5rem 0.85rem;
   }
 
+  .hero-section {
+    min-height: 100dvh;
+    padding-top: 7rem;
+    padding-bottom: 3.5rem;
+    align-items: flex-end;
+  }
+
+  .hero-bg-img {
+    object-position: 70% 12%;
+  }
+
+  .hero-scrim-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(18, 16, 14, 0.25) 0%,
+      rgba(18, 16, 14, 0.55) 35%,
+      rgba(18, 16, 14, 0.92) 75%,
+      rgba(18, 16, 14, 0.98) 100%
+    );
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.68rem;
+    padding: 0.35rem 0.85rem;
+    margin-bottom: 0.85rem;
+  }
+
   .hero-headline {
-    font-size: 2.3rem;
+    font-size: 2.2rem;
+    line-height: 1.14;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.1rem;
+    line-height: 1.35;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-subheadline {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin-bottom: 1.6rem;
+  }
+
+  .hero-btn-whatsapp {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .hero-microcopy {
+    font-size: 0.76rem;
   }
 
   .about-badges-grid {
@@ -1856,8 +1849,7 @@ ul, ol {
 @media (prefers-reduced-transparency: reduce) {
   .nav-island,
   .floating-whatsapp,
-  .bezel-outer,
-  .hero-floating-pill {
+  .bezel-outer {
     background-color: var(--color-surface) !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;

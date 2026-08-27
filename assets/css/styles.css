@@ -585,24 +585,23 @@ ul, ol {
 .mobile-drawer.open .mobile-drawer-link:nth-child(5) { transition-delay: 280ms; }
 
 /* --------------------------------------------------------------------------
-   8. SECTION 1: IMMERSIVE HERO SECTION (BACKGROUND PHOTO + TEXT OVERLAY)
+   8. SECTION 1: HERO SECTION — PHOTO BACKGROUND + GLASSMORPHISM CARD
    -------------------------------------------------------------------------- */
+
+/* === CONTAINER === */
 .hero-section {
   position: relative;
   min-height: 100dvh;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   overflow: hidden;
-  padding-top: clamp(7.5rem, 13vw, 9.5rem);
-  padding-bottom: clamp(4.5rem, 8.5vw, 6.5rem);
-  background-color: #12100E;
+  background-color: #1A1815;
 }
 
+/* === PHOTO — cobre a metade direita em desktop, tela toda em mobile === */
 .hero-bg-media {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
   z-index: 0;
   overflow: hidden;
 }
@@ -611,109 +610,180 @@ ul, ol {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 78% 18%;
-  filter: brightness(0.9) contrast(1.05);
+  object-position: 65% top;
+  display: block;
 }
 
-.hero-scrim-overlay {
+/* Fade suave à esquerda para o card glassmorphism respirar */
+.hero-bg-media::after {
+  content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    90deg,
-    rgba(18, 16, 14, 0.96) 0%,
-    rgba(18, 16, 14, 0.85) 45%,
-    rgba(18, 16, 14, 0.45) 75%,
-    rgba(18, 16, 14, 0.2) 100%
+    105deg,
+    rgba(20, 17, 15, 0.78) 0%,
+    rgba(20, 17, 15, 0.45) 42%,
+    rgba(20, 17, 15, 0.08) 70%,
+    transparent 100%
   );
-  z-index: 1;
+  pointer-events: none;
 }
 
+/* === LAYOUT WRAPPER === */
 .hero-container {
   position: relative;
   z-index: 2;
   width: 100%;
-}
-
-.hero-content {
-  max-width: 660px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: clamp(7rem, 14vw, 10rem) var(--container-padding-x) clamp(4rem, 8vw, 6rem);
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  min-height: 100dvh;
 }
 
+/* === GLASSMORPHISM CARD === */
+.hero-glass-card {
+  width: 100%;
+  max-width: 520px;
+  background: rgba(20, 17, 15, 0.55);
+  backdrop-filter: blur(32px) saturate(160%);
+  -webkit-backdrop-filter: blur(32px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  padding: clamp(2rem, 4.5vw, 3rem) clamp(1.75rem, 4vw, 2.75rem);
+  box-shadow:
+    0 32px 80px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* === EYEBROW LABEL === */
 .hero-eyebrow {
-  background: rgba(182, 141, 115, 0.2);
-  border-color: rgba(182, 141, 115, 0.38);
-  color: var(--color-champagne-light);
-  margin-bottom: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-champagne);
+  margin-bottom: 1.35rem;
 }
 
+.hero-eyebrow-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--color-champagne);
+  display: inline-block;
+}
+
+/* === HEADLINE === */
 .hero-headline {
   font-family: var(--font-serif);
-  font-size: clamp(2.4rem, 5.2vw, 4.4rem);
-  line-height: 1.08;
+  font-size: clamp(2.1rem, 4.5vw, 3.5rem);
+  line-height: 1.1;
   font-weight: 500;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.025em;
   color: #FFFFFF;
-  margin-bottom: 1.25rem;
-  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.35);
+  margin-bottom: 1.1rem;
 }
 
 .hero-headline .italic-accent {
-  color: var(--color-champagne-light);
-}
-
-.hero-tagline {
-  font-family: var(--font-serif);
-  font-size: clamp(1.2rem, 2.2vw, 1.55rem);
-  color: var(--color-champagne-light);
-  line-height: 1.35;
-  margin-bottom: 1.25rem;
+  font-style: italic;
+  color: var(--color-champagne);
   font-weight: 400;
 }
 
-.hero-subheadline {
-  font-size: clamp(1rem, 1.45vw, 1.12rem);
-  color: rgba(251, 248, 244, 0.85);
-  line-height: 1.7;
-  max-width: 540px;
-  margin-bottom: 2.25rem;
+/* === TAGLINE === */
+.hero-tagline {
+  font-size: clamp(0.94rem, 1.6vw, 1.06rem);
+  color: rgba(244, 236, 228, 0.82);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 420px;
 }
 
-.hero-btn-whatsapp {
-  background: linear-gradient(135deg, var(--color-champagne) 0%, #9A7259 100%);
-  color: #FFFFFF;
-  border-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 12px 32px -4px rgba(182, 141, 115, 0.45), var(--inset-bevel);
+/* === DIVIDER === */
+.hero-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 1.75rem;
 }
 
-.hero-btn-whatsapp .btn-icon-circle {
-  background-color: #171412;
-  color: #FFFFFF;
+/* === CTA BUTTON === */
+.hero-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+  background-color: #FFFFFF;
+  color: #171412;
+  padding: 0.7rem 0.7rem 0.7rem 1.6rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform var(--duration-fast) var(--ease-spring), box-shadow var(--duration-fast) var(--ease-out), background-color var(--duration-fast) var(--ease-out);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
+  touch-action: manipulation;
+}
+
+.hero-cta-btn:active {
+  transform: scale(0.97);
+  transition-duration: var(--duration-press);
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .hero-btn-whatsapp:hover {
-    background: linear-gradient(135deg, #C69D83 0%, #8A644D 100%);
-    box-shadow: 0 18px 42px -4px rgba(182, 141, 115, 0.55);
+  .hero-cta-btn:hover {
+    transform: translateY(-2px);
+    background-color: var(--color-champagne-light);
+    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.4);
+  }
+  .hero-cta-btn:hover .hero-cta-icon {
+    transform: translate(3px, -1px) scale(1.08);
+    background-color: var(--color-champagne-dark);
   }
 }
 
-.hero-microcopy {
+.hero-cta-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--color-champagne);
+  color: #FFFFFF;
   display: flex;
   align-items: center;
-  gap: 0.55rem;
-  font-size: 0.82rem;
-  color: rgba(251, 248, 244, 0.75);
-  font-weight: 500;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform var(--duration-fast) var(--ease-spring), background-color var(--duration-fast) var(--ease-out);
 }
 
-.hero-microcopy-dot {
+/* === STATUS INDICATOR === */
+.hero-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  color: rgba(244, 236, 228, 0.65);
+  font-weight: 500;
+  margin-top: 1.25rem;
+}
+
+.hero-status-dot {
   width: 6px;
   height: 6px;
   background-color: var(--color-whatsapp-badge);
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(37, 211, 102, 0.7);
+  flex-shrink: 0;
+  box-shadow: 0 0 8px rgba(37, 211, 102, 0.7);
+  animation: pulse-dot 2.2s infinite var(--ease-in-out);
 }
 
 /* --------------------------------------------------------------------------
@@ -1756,60 +1826,67 @@ ul, ol {
 
   .hero-section {
     min-height: 100dvh;
-    padding-top: 7rem;
-    padding-bottom: 3.5rem;
-    align-items: flex-end;
   }
 
-  .hero-bg-img {
-    object-position: 70% 12%;
+  /* On mobile: foto da dra aparece no topo (acima do card) */
+  .hero-bg-media {
+    height: 65dvh;
+    top: 0;
+    position: absolute;
   }
 
-  .hero-scrim-overlay {
+  /* No mobile o fade vai pra baixo para revelar rosto em cima */
+  .hero-bg-media::after {
     background: linear-gradient(
       180deg,
-      rgba(18, 16, 14, 0.25) 0%,
-      rgba(18, 16, 14, 0.55) 35%,
-      rgba(18, 16, 14, 0.92) 75%,
-      rgba(18, 16, 14, 0.98) 100%
+      rgba(20, 17, 15, 0.1) 0%,
+      rgba(20, 17, 15, 0.3) 55%,
+      rgba(20, 17, 15, 0.92) 85%,
+      rgba(20, 17, 15, 1) 100%
     );
   }
 
-  .hero-content {
-    max-width: 100%;
+  .hero-bg-img {
+    object-position: center 10%;
   }
 
-  .hero-eyebrow {
-    font-size: 0.68rem;
-    padding: 0.35rem 0.85rem;
-    margin-bottom: 0.85rem;
+  .hero-container {
+    align-items: flex-end;
+    padding-top: 5rem;
+    padding-bottom: 2.5rem;
+    min-height: 100dvh;
+  }
+
+  .hero-glass-card {
+    max-width: 100%;
+    background: rgba(20, 17, 15, 0.72);
+    border-radius: 24px;
+    padding: 1.75rem 1.5rem;
+    border-color: rgba(255, 255, 255, 0.1);
   }
 
   .hero-headline {
-    font-size: 2.2rem;
-    line-height: 1.14;
-    margin-bottom: 0.75rem;
+    font-size: clamp(1.85rem, 7vw, 2.4rem);
   }
 
   .hero-tagline {
-    font-size: 1.1rem;
-    line-height: 1.35;
-    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
   }
 
-  .hero-subheadline {
-    font-size: 0.92rem;
-    line-height: 1.55;
-    margin-bottom: 1.6rem;
+  .hero-cta-btn {
+    font-size: 0.9rem;
+    padding: 0.65rem 0.65rem 0.65rem 1.4rem;
   }
 
-  .hero-btn-whatsapp {
-    width: 100%;
-    justify-content: space-between;
+  .hero-cta-icon {
+    width: 2.25rem;
+    height: 2.25rem;
   }
 
-  .hero-microcopy {
-    font-size: 0.76rem;
+  .hero-status {
+    font-size: 0.72rem;
+    margin-top: 1rem;
   }
 
   .about-badges-grid {

@@ -123,47 +123,68 @@
 
   <main>
     <!-- ========================================================================
-         SEÇÃO 1: HERO SECTION IMERSIVA (FOTO DE FUNDO + TEXTO SOBREPOSTO)
+         SEÇÃO 1: HERO SECTION — FOTO DE FUNDO + CARD GLASSMORPHISM
          ======================================================================== -->
     <section id="hero" class="hero-section">
-      <div class="hero-bg-media">
-        <img src="assets/images/dra-andressa-hero.jpg" alt="Dra. Maria Andressa Araújo - Harmonização Facial em Manaus" class="hero-bg-img" fetchpriority="high">
-        <div class="hero-scrim-overlay"></div>
-      </div>
-      <div class="container hero-container">
-        <div class="hero-content reveal-on-scroll">
-          <span class="eyebrow hero-eyebrow">
-            <span class="eyebrow-dot"></span>
-            Harmonização Facial em Manaus
-          </span>
 
+      <!-- FOTO DA DRA. ANDRESSA COMO FUNDO -->
+      <div class="hero-bg-media" aria-hidden="true">
+        <img
+          src="assets/images/dra-andressa-hero.jpg"
+          alt=""
+          class="hero-bg-img"
+          fetchpriority="high"
+          loading="eager"
+        >
+      </div>
+
+      <!-- CARD GLASSMORPHISM COM TODAS AS INFORMAÇÕES -->
+      <div class="hero-container">
+        <div class="hero-glass-card reveal-on-scroll">
+
+          <!-- Eyebrow -->
+          <p class="hero-eyebrow">
+            <span class="hero-eyebrow-dot"></span>
+            Harmonização Facial em Manaus
+          </p>
+
+          <!-- Headline principal -->
           <h1 class="hero-headline">
-            Sua autoestima merece acompanhar <span class="italic-accent">quem você se tornou.</span>
+            Sua autoestima merece acompanhar
+            <span class="italic-accent"> quem você se tornou.</span>
           </h1>
 
+          <!-- Tagline -->
           <p class="hero-tagline">
-            Harmonização facial com <span class="italic-accent">naturalidade</span>, técnica e cuidado individualizado.
+            Harmonização facial com <em style="font-style:italic; color:var(--color-champagne);">naturalidade</em>, técnica e cuidado individualizado em Manaus.
           </p>
 
-          <p class="hero-subheadline">
-            Atendimento personalizado para quem deseja valorizar os próprios traços com uma abordagem cuidadosa, segura e autêntica em Manaus.
+          <!-- Divider -->
+          <div class="hero-divider"></div>
+
+          <!-- CTA WhatsApp -->
+          <a
+            href="https://wa.me/5592985998869?text=Ol%C3%A1%2C%20Dra.%20Andressa!%20Encontrei%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20para%20harmoniza%C3%A7%C3%A3o%20facial."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hero-cta-btn"
+            aria-label="Quero agendar minha avaliação pelo WhatsApp"
+          >
+            <span>Quero agendar minha avaliação</span>
+            <span class="hero-cta-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </a>
+
+          <!-- Status indicator -->
+          <p class="hero-status">
+            <span class="hero-status-dot" aria-hidden="true"></span>
+            Atendimento em Manaus &bull; Agendamento pelo WhatsApp
           </p>
 
-          <div class="hero-cta-group">
-            <a href="https://wa.me/5592985998869?text=Ol%C3%A1%2C%20Dra.%20Andressa!%20Encontrei%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20para%20harmoniza%C3%A7%C3%A3o%20facial." target="_blank" rel="noopener noreferrer" class="btn-primary hero-btn-whatsapp" aria-label="Quero agendar minha avaliação">
-              <span>Quero agendar minha avaliação</span>
-              <span class="btn-icon-circle">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </span>
-            </a>
-
-            <div class="hero-microcopy">
-              <span class="hero-microcopy-dot"></span>
-              <span>Atendimento em Manaus • Agendamento pelo WhatsApp</span>
-            </div>
-          </div>
         </div>
       </div>
+
     </section>
 
     <!-- ========================================================================

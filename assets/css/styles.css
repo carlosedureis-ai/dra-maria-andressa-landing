@@ -1850,11 +1850,12 @@ ul, ol {
 
   .hero-section {
     min-height: 100svh;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 
   .hero-grid {
-    flex-direction: column;
-    min-height: 100svh;
+    min-height: auto;
   }
 
   /* On mobile: foto da dra aparece no topo */

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,978 +19,112 @@
   <!-- Google Fonts: Bodoni Moda, Cormorant Garamond & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;1,6..96,400;1,6..96,500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
 
-  <!-- Estilos Customizados -->
+  <!-- CSS Principal -->
   <link rel="stylesheet" href="assets/css/styles.css">
 
-  <!-- Favicon Editorial Monograma MA -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='28' fill='%23171412'/><text x='50%' y='60%' font-size='44' font-family='serif' font-weight='600' fill='%23B68D73' dominant-baseline='middle' text-anchor='middle'>MA</text></svg>" type="image/svg+xml">
-
-  <!-- Schema.org JSON-LD para SEO Local & Autoridade em Manaus -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "HealthAndBeautyBusiness",
-    "name": "Dra. Maria Andressa Araújo - Harmonização Facial & Estética Avançada",
-    "image": "assets/images/dra-andressa-hero.jpg",
-    "telephone": "+55-92-98599-8869",
-    "description": "Atendimento personalizado de harmonização facial e estética avançada com foco em naturalidade e planejamento individual em Manaus.",
-    "priceRange": "$$$",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Manaus",
-      "addressRegion": "AM",
-      "addressCountry": "BR"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "-3.1190275",
-      "longitude": "-60.0217314"
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday"
-      ],
-      "opens": "09:00",
-      "closes": "19:00"
-    }
-  }
+  <script>
+    document.documentElement.classList.replace('no-js', 'js-enabled');
   </script>
 </head>
 <body>
-  <!-- High-End Tactile Noise Overlay -->
-  <div class="film-grain-overlay" aria-hidden="true"></div>
 
   <!-- ========================================================================
-       HEADER: FLUID ISLAND NAVIGATION
+       HEADER: EDITORIAL BOUTIQUE
        ======================================================================== -->
-  <div class="header-wrapper">
-    <nav class="nav-island" aria-label="Navegação Principal">
-      <a href="#hero" class="brand-wrapper" aria-label="Dra. Maria Andressa - Início">
+  <header class="header-editorial">
+    <div class="container header-container">
+      <a href="#hero" class="brand-editorial" aria-label="Dra. Maria Andressa - Início">
         <span class="brand-name">Dra. Maria Andressa</span>
-        <span class="brand-sub">FISIOTERAPEUTA &bull; ESTÉTICA AVANÇADA</span>
+        <span class="brand-sub">ESTÉTICA AVANÇADA • MANAUS</span>
       </a>
 
-      <div class="nav-links">
-        <a href="#posicionamento" class="nav-link">Posicionamento</a>
-        <a href="#valorizar" class="nav-link">O que Valorizar</a>
-        <a href="#filosofia" class="nav-link">Filosofia</a>
-        <a href="#como-funciona" class="nav-link">Como Funciona</a>
-        <a href="#sobre" class="nav-link">Sobre</a>
-        <a href="#faq" class="nav-link">Dúvidas</a>
+      <nav class="nav-editorial">
+        <a href="#posicionamento" class="nav-item">O que Valorizar</a>
+        <a href="#procedimentos" class="nav-item">Tratamentos</a>
+        <a href="#filosofia" class="nav-item">Filosofia</a>
+        <a href="#sobre" class="nav-item">Sobre</a>
+        <a href="#faq" class="nav-item">Dúvidas</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://wa.me/5592985998869?text=Olá" target="_blank" rel="noopener noreferrer" class="btn-dark" aria-label="Agendar Avaliação pelo WhatsApp">
+          AGENDAR AVALIAÇÃO
+        </a>
+        <button class="mobile-menu-btn" aria-label="Abrir Menu de Navegação" aria-expanded="false">
+          <span class="menu-icon-line line-1"></span>
+          <span class="menu-icon-line line-2"></span>
+        </button>
       </div>
-
-      <a href="https://wa.me/5592985998869?text=Ol%C3%A1%2C%20Dra.%20Andressa!%20Encontrei%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20para%20harmoniza%C3%A7%C3%A3o%20facial." target="_blank" rel="noopener noreferrer" class="nav-cta-btn" aria-label="Agendar Avaliação pelo WhatsApp">
-        <span>Agendar Avaliação</span>
-        <span class="btn-icon-circle champagne-circle">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </span>
-      </a>
-
-      <button class="mobile-menu-btn" aria-label="Abrir Menu de Navegação" aria-expanded="false">
-        <span class="menu-icon-line line-1"></span>
-        <span class="menu-icon-line line-2"></span>
-      </button>
-    </nav>
-  </div>
+    </div>
+  </header>
 
   <!-- Mobile Drawer Overlay -->
   <div class="mobile-drawer" aria-hidden="true">
     <div class="mobile-drawer-links">
       <a href="#hero" class="mobile-drawer-link">Início</a>
-      <a href="#posicionamento" class="mobile-drawer-link">Posicionamento</a>
-      <a href="#valorizar" class="mobile-drawer-link">O que Valorizar</a>
+      <a href="#posicionamento" class="mobile-drawer-link">O que Valorizar</a>
+      <a href="#procedimentos" class="mobile-drawer-link">Tratamentos</a>
       <a href="#filosofia" class="mobile-drawer-link">Filosofia</a>
-      <a href="#procedimentos" class="mobile-drawer-link">Procedimentos</a>
-      <a href="#como-funciona" class="mobile-drawer-link">Como Funciona</a>
       <a href="#sobre" class="mobile-drawer-link">Sobre a Dra. Andressa</a>
       <a href="#faq" class="mobile-drawer-link">Dúvidas Frequentes</a>
     </div>
-    <a href="https://wa.me/5592985998869?text=Ol%C3%A1%2C%20Dra.%20Andressa!%20Encontrei%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20para%20harmoniza%C3%A7%C3%A3o%20facial." target="_blank" rel="noopener noreferrer" class="nav-cta-btn" style="margin-top: 1rem; width: auto;">
-      <span>Agendar pelo WhatsApp</span>
-      <span class="btn-icon-circle champagne-circle">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </span>
+    <a href="https://wa.me/5592985998869" target="_blank" rel="noopener noreferrer" class="btn-dark mt-4">
+      AGENDAR AVALIAÇÃO
     </a>
   </div>
 
   <main>
     <!-- ========================================================================
-         SEÇÃO 1: HERO SECTION
+         SEÇÃO 1: HERO EDITORIAL (45/55 LAYOUT)
          ======================================================================== -->
-    <section id="hero" class="hero-section">
-      <!-- Decorativos (linhas curvas) -->
-      <div class="hero-decor-curve curve-1"></div>
-      <div class="hero-decor-curve curve-2"></div>
-
-      <!-- FOTO WIDE À DIREITA -->
-      <div class="hero-image-wrapper">
-        <img src="assets/images/dra-andressa-hero.jpg" alt="Dra. Maria Andressa" class="hero-bg-img" fetchpriority="high" loading="eager">
-        <div class="hero-image-gradient"></div>
-      </div>
-
-      <div class="container hero-grid">
+    <section id="hero" class="hero-editorial-section">
+      <div class="container hero-editorial-grid">
         
-        <!-- PAINEL EDITORIAL À ESQUERDA -->
-        <div class="hero-content reveal-on-scroll">
-          <p class="hero-eyebrow">
-            &bull; HARMONIZAÇÃO FACIAL EM MANAUS
-          </p>
-          
-          <h1 class="hero-headline">
-            Sua autoestima<br>
-            merece acompanhar<br>
-            <span class="italic-accent">quem você se tornou.</span>
+        <div class="hero-editorial-text reveal-on-scroll">
+          <span class="eyebrow">HARMONIZAÇÃO FACIAL • MANAUS</span>
+          <h1 class="hero-title">
+            Sua beleza não<br>
+            precisa de transformação.<br>
+            <em class="serif-italic">Precisa de intenção.</em>
           </h1>
+          <p class="hero-description">Naturalidade, técnica e planejamento individual para realçar quem você já é, com leveza e sofisticação.</p>
           
-          <p class="hero-tagline">
-            Harmonização facial com <span class="italic-accent">naturalidade</span>, técnica e cuidado individualizado em Manaus.
-          </p>
+          <div class="hero-ctas">
+            <a href="https://wa.me/5592985998869?text=Olá" target="_blank" rel="noopener noreferrer" class="btn-dark">
+              AGENDAR MINHA AVALIAÇÃO &rarr;
+            </a>
+            <a href="#sobre" class="btn-text">
+              CONHECER A DRA. ANDRESSA &rarr;
+            </a>
+          </div>
           
-          <div class="hero-divider"></div>
-          
-          <a href="https://wa.me/5592985998869?text=Ol%C3%A1%2C%20Dra.%20Andressa!%20Encontrei%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20para%20harmoniza%C3%A7%C3%A3o%20facial." target="_blank" rel="noopener noreferrer" class="hero-cta-btn" aria-label="Quero agendar minha avaliação pelo WhatsApp">
-            <span>Quero agendar minha avaliação</span>
-            <span class="hero-cta-icon" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
-          </a>
-          
-          <p class="hero-status">
-            <span class="hero-status-dot" aria-hidden="true"></span>
-            Atendimento em Manaus &bull; Agendamento pelo WhatsApp
-          </p>
+          <div class="hero-micro">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Atendimento individualizado • Manaus, AM
+          </div>
         </div>
 
+        <div class="hero-editorial-image reveal-on-scroll">
+          <img src="assets/images/dra-andressa-hero.jpg" alt="Dra. Maria Andressa Araújo" class="hero-img">
+          <div class="vertical-text" aria-hidden="true">MANAUS &mdash; AMAZONAS</div>
+        </div>
+        
       </div>
     </section>
+
+    <!-- ========================================================================
+         TRANSIÇÃO: MARQUEE EDITORIAL
+         ======================================================================== -->
+    <div class="editorial-marquee reveal-on-scroll" aria-hidden="true">
+      <div class="marquee-track">
+        <span>NATURALIDADE &mdash; PLANEJAMENTO &mdash; TÉCNICA &mdash; INDIVIDUALIDADE &mdash; </span>
+        <span>NATURALIDADE &mdash; PLANEJAMENTO &mdash; TÉCNICA &mdash; INDIVIDUALIDADE &mdash; </span>
+        <span>NATURALIDADE &mdash; PLANEJAMENTO &mdash; TÉCNICA &mdash; INDIVIDUALIDADE &mdash; </span>
+        <span>NATURALIDADE &mdash; PLANEJAMENTO &mdash; TÉCNICA &mdash; INDIVIDUALIDADE &mdash; </span>
+      </div>
+    </div>
 
     <!-- ========================================================================
          SEÇÃO 2: FAIXA DE POSICIONAMENTO (3 PILARES)
-         ======================================================================== -->
-    <section id="posicionamento" class="pillars-section">
-      <div class="container">
-        <div class="pillars-grid">
-          
-          <div class="pillar-item reveal-on-scroll stagger-1">
-            <div class="pillar-icon-box">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <div>
-              <h3 class="pillar-title">Naturalidade</h3>
-              <p class="pillar-desc">Valorizar os traços sem descaracterizar você ou criar padrões artificiais.</p>
-            </div>
-          </div>
-
-          <div class="pillar-item reveal-on-scroll stagger-2">
-            <div class="pillar-icon-box">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            </div>
-            <div>
-              <h3 class="pillar-title">Planejamento Individual</h3>
-              <p class="pillar-desc">Cada avaliação começa ouvindo seus objetivos e analisando suas proporções únicas.</p>
-            </div>
-          </div>
-
-          <div class="pillar-item reveal-on-scroll stagger-3">
-            <div class="pillar-icon-box">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-            </div>
-            <div>
-              <h3 class="pillar-title">Estética Avançada</h3>
-              <p class="pillar-desc">Abordagem técnica criteriosa, fundamentada em segurança, anatomia e harmonia.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================
-         SEÇÃO 3: IDENTIFICAÇÃO ("O que você gostaria de valorizar?")
-         ======================================================================== -->
-    <section id="valorizar" class="section">
-      <div class="container">
-        
-        <div class="text-center reveal-on-scroll">
-          <span class="eyebrow">Identificação</span>
-          <h2 class="section-title">O que você gostaria de valorizar?</h2>
-          <p class="section-subtitle mx-auto">
-            Cada rosto possui sua história e proporções singulares. Escolha o aspecto que você deseja harmonizar e converse sobre as possibilidades:
-          </p>
-        </div>
-
-        <div class="identification-grid">
-          
-          <!-- Card 1: Harmonia Facial -->
-          <div class="bezel-outer reveal-on-scroll stagger-1">
-            <div class="bezel-inner ident-card">
-              <div>
-                <span class="ident-card-number">01 / Proporção</span>
-                <h3 class="ident-card-title">Harmonia Facial</h3>
-                <p class="ident-card-desc">
-                  Para quem percebe que alguns pontos do rosto poderiam ganhar mais equilíbrio, sustentação e definição sem exageros.
-                </p>
-              </div>
-              <a href="https://wa.me/5592985998869?text=Ol%C3%A1%2C%20Dra.%20Andressa!%20Gostaria%20de%20conversar%20sobre%20avalia%C3%A7%C3%A3o%20para%20harmonia%20facial%20e%20equil%C3%ADbrio%20do%20rosto." target="_blank" rel="noopener noreferrer" class="ident-card-cta" aria-label="Conversar sobre meu rosto">
-                <span>Conversar sobre meu rosto</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- Card 2: Lábios e Contorno -->
-          <div class="bezel-outer reveal-on-scroll stagger-2">
-            <div class="bezel-inner ident-card">
-              <div>
-                <span class="ident-card-number">02 / Definição</span>
-                <h3 class="ident-card-title">Lábios e Contorno</h3>
-                <p class="ident-card-desc">
-                  Para quem busca melhorar proporção, hidratação profunda, contorno labial ou corrigir pequenas assimetrias mantendo a leveza e naturalidade.
-                </p>
-              </div>
-              <a href="https://wa.me/5592985998869?text=Ol%C3%A1%2C%20Dra.%20Andressa!%20Gostaria%20de%20entender%20as%20possibilidades%20para%20l%C3%A1bios%20e%20contorno%20facial." target="_blank" rel="noopener noreferrer" class="ident-card-cta" aria-label="Quero entender as possibilidades">
-                <span>Quero entender as possibilidades</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- Card 3: Rejuvenescimento -->
-          <div class="bezel-outer reveal-on-scroll stagger-3">
-            <div class="bezel-inner ident-card">
-              <div>
-                <span class="ident-card-number">03 / Vitalidade</span>
-                <h3 class="ident-card-title">Rejuvenescimento</h3>
-                <p class="ident-card-desc">
-                  Para quem deseja suavizar marcas de expressão, aspecto de cansaço e sinais que já não representam como você se sente e se posiciona hoje.
-                </p>
-              </div>
-              <a href="https://wa.me/5592985998869?text=Ol%C3%A1%2C%20Dra.%20Andressa!%20Gostaria%20de%20saber%20mais%20sobre%20tratamentos%20de%20rejuvenescimento%20e%20est%C3%A9tica%20facial." target="_blank" rel="noopener noreferrer" class="ident-card-cta" aria-label="Conversar sobre rejuvenescimento">
-                <span>Conversar sobre rejuvenescimento</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================
-         SEÇÃO 4: RESULTADO DESEJADO / FILOSOFIA DE TRATAMENTO
-         ======================================================================== -->
-    <section id="filosofia" class="section philosophy-section">
-      <div class="container">
-        <div class="philosophy-grid">
-          
-          <div class="philosophy-quote-box reveal-on-scroll">
-            <span class="quote-mark">“</span>
-            <h2 class="philosophy-quote">
-              Não é sobre mudar seu rosto. É sobre fazer você se <span class="italic-accent">reconhecer ainda mais nele.</span>
-            </h2>
-            <p class="philosophy-text">
-              A proposta do atendimento é acolher seus incômodos, apresentar possibilidades realistas e buscar o equilíbrio perfeito sem apagar aquilo que torna sua expressão única e marcante.
-            </p>
-
-            <div class="philosophy-highlights">
-              <div class="philosophy-item">
-                <span class="check-circle">✓</span>
-                <span>Abordagem personalizada que respeita sua estrutura óssea e muscular</span>
-              </div>
-              <div class="philosophy-item">
-                <span class="check-circle">✓</span>
-                <span>Produtos de excelência e segurança clínica comprovada</span>
-              </div>
-              <div class="philosophy-item">
-                <span class="check-circle">✓</span>
-                <span>Resultados elegantes em que ninguém nota o procedimento, apenas seu bem-estar</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="reveal-on-scroll stagger-2">
-            <div class="philosophy-image-container">
-              <img src="assets/images/dra-andressa-sobre.jpg" alt="Dra. Maria Andressa Araújo em consulta e planejamento de estética avançada" class="philosophy-img" loading="lazy">
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================
-         SEÇÃO 5: PROCEDIMENTOS & PERSONALIZAÇÃO
-         ======================================================================== -->
-    <section id="procedimentos" class="section">
-      <div class="container">
-        
-        <div class="text-center reveal-on-scroll">
-          <span class="eyebrow">Tratamentos Realizados</span>
-          <h2 class="section-title">Procedimentos com Foco em Técnica e Harmonia</h2>
-          <p class="section-subtitle mx-auto">
-            Cada indicação é planejada exclusivamente após uma avaliação detalhada dos seus objetivos e características individuais.
-          </p>
-        </div>
-
-        <div class="procedures-grid">
-          
-          <!-- Proc 1 -->
-          <div class="bezel-outer reveal-on-scroll stagger-1">
-            <div class="bezel-inner proc-card">
-              <div class="proc-header">
-                <span class="proc-badge">Estrutura & Contorno</span>
-              </div>
-              <h3 class="proc-title">Preenchimento & Harmonização Facial</h3>
-              <p class="proc-for">Para quem busca:</p>
-              <p class="proc-desc">
-                Definição sutil de mandíbula, malar, mento ou têmporas, restabelecendo pontos de sustentação e volumetria anatômica com ácido hialurônico.
-              </p>
-            </div>
-          </div>
-
-          <!-- Proc 2 -->
-          <div class="bezel-outer reveal-on-scroll stagger-2">
-            <div class="bezel-inner proc-card">
-              <div class="proc-header">
-                <span class="proc-badge">Estímulo & Firmeza</span>
-              </div>
-              <h3 class="proc-title">Bioestimuladores de Colágeno</h3>
-              <p class="proc-for">Para quem busca:</p>
-              <p class="proc-desc">
-                Melhora progressiva da qualidade, densidade e firmeza da pele, combatendo a flacidez tecidual de forma duradoura e natural.
-              </p>
-            </div>
-          </div>
-
-          <!-- Proc 3 -->
-          <div class="bezel-outer reveal-on-scroll stagger-3">
-            <div class="bezel-inner proc-card">
-              <div class="proc-header">
-                <span class="proc-badge">Expressão & Prevenção</span>
-              </div>
-              <h3 class="proc-title">Toxina Botulínica (Preventiva & Reparadora)</h3>
-              <p class="proc-for">Para quem busca:</p>
-              <p class="proc-desc">
-                Suavização delicada de linhas de expressão na testa, glabela e pés de galinha, mantendo a naturalidade da mímica facial sem efeito congelado.
-              </p>
-            </div>
-          </div>
-
-          <!-- Proc 4 -->
-          <div class="bezel-outer reveal-on-scroll stagger-4">
-            <div class="bezel-inner proc-card">
-              <div class="proc-header">
-                <span class="proc-badge">Proporção & Desenho</span>
-              </div>
-              <h3 class="proc-title">Preenchimento Labial & Rinomodelação</h3>
-              <p class="proc-for">Para quem busca:</p>
-              <p class="proc-desc">
-                Contorno, hidratação ou volume labial harmônico e refinamento sutil do dorso ou ponta nasal sem intervenções cirúrgicas agressivas.
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Box Contextual -->
-        <div class="procedures-context-box reveal-on-scroll">
-          <div class="proc-context-text">
-            <h3>Não sabe qual procedimento faz mais sentido para você?</h3>
-            <p>Você não precisa saber os nomes técnicos antes da sua avaliação. O primeiro passo é entender o que você deseja valorizar.</p>
-          </div>
-          <a href="https://wa.me/5592985998869?text=Ol%C3%A1%2C%20Dra.%20Andressa!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20personalizada%20para%20entender%20o%20que%20faz%20sentido%20para%20meu%20rosto." target="_blank" rel="noopener noreferrer" class="btn-primary" style="flex-shrink: 0;" aria-label="Quero uma avaliação personalizada">
-            <span>Avaliação personalizada</span>
-            <span class="btn-icon-circle">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
-          </a>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ========================================================================
-         SEÇÃO 6: COMO FUNCIONA EM 3 ETAPAS
-         ======================================================================== -->
-    <section id="como-funciona" class="section" style="background-color: var(--color-nude);">
-      <div class="container">
-        
-        <div class="text-center reveal-on-scroll">
-          <span class="eyebrow" style="background: rgba(255,255,255,0.6); border-color: rgba(182,141,115,0.3);">Jornada do Paciente</span>
-          <h2 class="section-title">Sua Avaliação em 3 Etapas</h2>
-          <p class="section-subtitle mx-auto">
-            Um processo claro, transparente e sem pressão para que você se sinta totalmente confiante e segura.
-          </p>
-        </div>
-
-        <div class="steps-grid">
-          
-          <!-- Etapa 01 -->
-          <div class="bezel-outer reveal-on-scroll stagger-1">
-            <div class="bezel-inner step-card">
-              <span class="step-number">01</span>
-              <h3 class="step-title">Primeiro Contato</h3>
-              <p class="step-desc">
-                Você envia uma mensagem contando brevemente o que gostaria de cuidar e nossa equipe verifica os horários e datas disponíveis em Manaus.
-              </p>
-            </div>
-          </div>
-
-          <!-- Etapa 02 -->
-          <div class="bezel-outer reveal-on-scroll stagger-2">
-            <div class="bezel-inner step-card">
-              <span class="step-number">02</span>
-              <h3 class="step-title">Avaliação Individual</h3>
-              <p class="step-desc">
-                No consultório, a Dra. Andressa conhece suas expectativas, analisa minuciosamente a anatomia do seu rosto e define possibilidades terapêuticas.
-              </p>
-            </div>
-          </div>
-
-          <!-- Etapa 03 -->
-          <div class="bezel-outer reveal-on-scroll stagger-3">
-            <div class="bezel-inner step-card">
-              <span class="step-number">03</span>
-              <h3 class="step-title">Orientação & Decisão</h3>
-              <p class="step-desc">
-                Você recebe explicações completas sobre indicações, produtos, etapas e cuidados antes de qualquer decisão. Total liberdade e segurança.
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="text-center reveal-on-scroll">
-          <a href="https://wa.me/5592985998869?text=Ol%C3%A1%2C%20Dra.%20Andressa!%20Gostaria%20de%20come%C3%A7ar%20agendando%20minha%20avalia%C3%A7%C3%A3o%20pelo%20WhatsApp." target="_blank" rel="noopener noreferrer" class="btn-primary btn-whatsapp" aria-label="Quero começar pelo WhatsApp">
-            <span>Quero começar pelo WhatsApp</span>
-            <span class="btn-icon-circle">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
-          </a>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ========================================================================
-         SEÇÃO 7: SOBRE A DRA. ANDRESSA
-         ======================================================================== -->
-    <section id="sobre" class="section">
-      <div class="container">
-        <div class="about-grid">
-          
-          <div class="reveal-on-scroll">
-            <div class="about-image-bezel">
-              <div class="about-image-container">
-                <img src="assets/images/dra-andressa-sobre.jpg" alt="Dra. Maria Andressa Araújo - Fisioterapeuta e Especialista em Estética Avançada" class="about-img" loading="lazy">
-              </div>
-            </div>
-          </div>
-
-          <div class="reveal-on-scroll stagger-2">
-            <span class="eyebrow">Quem Estará Cuidando de Você</span>
-            <h2 class="about-name">Dra. Maria Andressa Araújo</h2>
-            <p class="about-role">Fisioterapeuta • Estética Avançada & Harmonização Facial</p>
-
-            <p class="about-bio">
-              Sua atuação une um olhar cuidadoso e sensível para a estética, planejamento individual e a valorização intransigente da naturalidade em cada atendimento.
-            </p>
-            <p class="about-bio" style="margin-top: -1rem;">
-              Com sólida fundamentação anatômica e técnica contínua, o foco é proporcionar procedimentos seguros, refinados e harmoniosos, permitindo que sua beleza evolua sem perder sua essência.
-            </p>
-
-            <div class="about-badges-grid">
-              <div class="about-badge-card">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-champagne)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                <div>
-                  <strong>Segurança & Técnica</strong>
-                  <span>Fundamentação anatômica</span>
-                </div>
-              </div>
-
-              <div class="about-badge-card">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-champagne)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-                <div>
-                  <strong>Naturalidade Real</strong>
-                  <span>Sem descaracterização</span>
-                </div>
-              </div>
-
-              <div class="about-badge-card">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-champagne)" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                <div>
-                  <strong>Cuidado Humanizado</strong>
-                  <span>Atendimento exclusivo</span>
-                </div>
-              </div>
-
-              <div class="about-badge-card">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-champagne)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                <div>
-                  <strong>Manaus • AM</strong>
-                  <span>Consultório estruturado</span>
-                </div>
-              </div>
-            </div>
-
-            <a href="https://wa.me/5592985998869?text=Ol%C3%A1%2C%20Dra.%20Andressa!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" class="btn-primary" aria-label="Agendar conversa com a Dra. Andressa">
-              <span>Agendar com a Dra. Andressa</span>
-              <span class="btn-icon-circle">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </span>
-            </a>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================
-         SEÇÃO 8: RESULTADOS REAIS & ÉTICA VISUAL
-         ======================================================================== -->
-    <section id="resultados" class="section" style="background-color: var(--color-alabaster);">
-      <div class="container">
-        
-        <div class="text-center reveal-on-scroll">
-          <span class="eyebrow">Harmonia Perceptível</span>
-          <h2 class="section-title">Naturalidade que você consegue perceber — sem apagar sua identidade.</h2>
-          <p class="section-subtitle mx-auto">
-            A verdadeira sofisticação na estética avançada está naquilo que as pessoas admiram sem conseguir apontar onde houve intervenção.
-          </p>
-        </div>
-
-        <div class="results-grid">
-          
-          <!-- Caso 1 -->
-          <div class="bezel-outer reveal-on-scroll stagger-1">
-            <div class="bezel-inner result-card">
-              <span class="result-tag">Estudo Clínico 01</span>
-              <h3 class="result-card-title">Equilíbrio de Perfil & Terço Inferior</h3>
-              
-              <div class="result-case-box">
-                <div class="result-case-label">Objetivo da Paciente</div>
-                <div class="result-case-value">Melhorar a definição mandibular e a proporção do queixo sem aspecto pesado ou masculinizado.</div>
-              </div>
-
-              <div class="result-case-box">
-                <div class="result-case-label">Abordagem Realizada</div>
-                <div class="result-case-value">Preenchimento pontual com pontos de sustentação anatômica, conferindo elegância ao perfil facial.</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Caso 2 -->
-          <div class="bezel-outer reveal-on-scroll stagger-2">
-            <div class="bezel-inner result-card">
-              <span class="result-tag">Estudo Clínico 02</span>
-              <h3 class="result-card-title">Definição & Hidratação Labial</h3>
-              
-              <div class="result-case-box">
-                <div class="result-case-label">Objetivo da Paciente</div>
-                <div class="result-case-value">Realçar o desenho do arco do cupido e recuperar o viço dos lábios mantendo a mobilidade suave.</div>
-              </div>
-
-              <div class="result-case-box">
-                <div class="result-case-label">Abordagem Realizada</div>
-                <div class="result-case-value">Microinjeções de ácido hialurônico para contorno preciso e hidratação profunda sem projeção exagerada.</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Caso 3 -->
-          <div class="bezel-outer reveal-on-scroll stagger-3">
-            <div class="bezel-inner result-card">
-              <span class="result-tag">Estudo Clínico 03</span>
-              <h3 class="result-card-title">Descanso do Olhar & Suavização</h3>
-              
-              <div class="result-case-box">
-                <div class="result-case-label">Objetivo da Paciente</div>
-                <div class="result-case-value">Atenuar a aparência de cansaço facial ao redor dos olhos e testa sem paralisar a expressão natural.</div>
-              </div>
-
-              <div class="result-case-box">
-                <div class="result-case-label">Abordagem Realizada</div>
-                <div class="result-case-value">Aplicação estratégica e dosimetria personalizada de toxina botulínica de alta pureza.</div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <p class="result-ethics-note reveal-on-scroll">
-          * Nota ético-profissional: Cada organismo e anatomia possui características biológicas exclusivas. Os resultados variam individualmente e dependem da avaliação prévia em consultório.
-        </p>
-
-      </div>
-    </section>
-
-    <!-- ========================================================================
-         SEÇÃO 9: FEEDBACKS & EXPERIÊNCIA DE QUEM JÁ PASSOU PELO ATENDIMENTO
-         ======================================================================== -->
-    <section id="feedbacks" class="section" style="background-color: var(--color-nude);">
-      <div class="container">
-        
-        <div class="text-center reveal-on-scroll">
-          <span class="eyebrow" style="background: rgba(255,255,255,0.6); border-color: rgba(182,141,115,0.3);">Prova Social</span>
-          <h2 class="section-title">Experiências de Quem Já Passou pelo Atendimento</h2>
-          <p class="section-subtitle mx-auto">
-            O carinho, a tranquilidade e a confiança construídos em cada consulta individualizada.
-          </p>
-        </div>
-
-        <div class="feedbacks-grid">
-          
-          <!-- Depoimento 1 -->
-          <div class="bezel-outer reveal-on-scroll stagger-1">
-            <div class="bezel-inner feedback-card">
-              <div class="feedback-stars">★★★★★</div>
-              <p class="feedback-quote">
-                “Eu tinha muito receio de fazer qualquer procedimento e ficar com o rosto artificial. A Dra. Andressa teve uma paciência incrível na avaliação, explicou cada detalhe e o resultado ficou extremamente natural. Me sinto renovada!”
-              </p>
-              <div class="feedback-author">
-                <div class="feedback-avatar-placeholder">C.M.</div>
-                <div>
-                  <div class="feedback-author-name">Camila M.</div>
-                  <div class="feedback-author-focus">Paciente • Harmonização Facial</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Depoimento 2 -->
-          <div class="bezel-outer reveal-on-scroll stagger-2">
-            <div class="bezel-inner feedback-card">
-              <div class="feedback-stars">★★★★★</div>
-              <p class="feedback-quote">
-                “O atendimento é impecável do início ao fim. O consultório é super acolhedor e a Dra. Andressa passa muita segurança. Fiz preenchimento labial e ficou exatamente como eu sonhava: delicado e hidratado.”
-              </p>
-              <div class="feedback-author">
-                <div class="feedback-avatar-placeholder">R.S.</div>
-                <div>
-                  <div class="feedback-author-name">Renata S.</div>
-                  <div class="feedback-author-focus">Paciente • Preenchimento Labial</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Depoimento 3 -->
-          <div class="bezel-outer reveal-on-scroll stagger-3">
-            <div class="bezel-inner feedback-card">
-              <div class="feedback-stars">★★★★★</div>
-              <p class="feedback-quote">
-                “A sensação de me olhar no espelho e me reconhecer, mas sem aquele ar de cansaço diário, não tem preço. Trabalho com atendimento ao público e todo mundo elogiou sem saber o que eu tinha feito.”
-              </p>
-              <div class="feedback-author">
-                <div class="feedback-avatar-placeholder">J.B.</div>
-                <div>
-                  <div class="feedback-author-name">Juliana B.</div>
-                  <div class="feedback-author-focus">Paciente • Rejuvenescimento Facial</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================
-         SEÇÃO 10: CLÍNICA / EXPERIÊNCIA EM MANAUS
-         ======================================================================== -->
-    <section id="clinica" class="section">
-      <div class="container">
-        <div class="clinic-grid">
-          
-          <div class="reveal-on-scroll">
-            <span class="eyebrow">Espaço & Acolhimento</span>
-            <h2 class="section-title">Um ambiente preparado para receber você com conforto e privacidade</h2>
-            <p class="section-subtitle">
-              Nosso espaço em Manaus foi planejado para oferecer uma experiência acolhedora, pontual e discreta, onde cada minuto é dedicado exclusivamente ao seu bem-estar.
-            </p>
-
-            <div class="clinic-features-list">
-              <div class="clinic-feature-item">
-                <div class="clinic-feature-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                </div>
-                <div class="clinic-feature-text">
-                  <h4>Rigorosa Biossegurança</h4>
-                  <p>Protocolos rigorosos de higiene e materiais descartáveis de alto padrão.</p>
-                </div>
-              </div>
-
-              <div class="clinic-feature-item">
-                <div class="clinic-feature-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                </div>
-                <div class="clinic-feature-text">
-                  <h4>Atendimento com Hora Marcada</h4>
-                  <p>Sem filas ou salas de espera cheias. Respeito total ao seu tempo e privacidade.</p>
-                </div>
-              </div>
-
-              <div class="clinic-feature-item">
-                <div class="clinic-feature-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                </div>
-                <div class="clinic-feature-text">
-                  <h4>Localização Acessível em Manaus</h4>
-                  <p>Fácil acesso, ambiente climatizado e suporte contínuo antes e após o atendimento.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="reveal-on-scroll stagger-2">
-            <div class="clinic-card-bezel">
-              <span class="clinic-badge-city">
-                <span class="eyebrow-dot"></span>
-                Manaus • Amazonas
-              </span>
-              <h3 class="clinic-location-title">Atendimento Especializado em Manaus</h3>
-              
-              <div class="clinic-info-row">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-champagne)" stroke-width="2" style="flex-shrink: 0; margin-top: 3px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                <div><strong>Cidade:</strong> Manaus – AM (Endereço detalhado e orientações enviadas após confirmação do agendamento).</div>
-              </div>
-
-              <div class="clinic-info-row">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-champagne)" stroke-width="2" style="flex-shrink: 0; margin-top: 3px;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                <div><strong>Horário de Atendimento:</strong> Segunda a Sábado, com agendamento prévio.</div>
-              </div>
-
-              <div class="clinic-info-row">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-champagne)" stroke-width="2" style="flex-shrink: 0; margin-top: 3px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                <div><strong>WhatsApp Direto:</strong> (92) 98599-8869</div>
-              </div>
-
-              <div style="margin-top: 2rem;">
-                <a href="https://wa.me/5592985998869?text=Ol%C3%A1%2C%20Dra.%20Andressa!%20Gostaria%20de%20consultar%20a%20disponibilidade%20de%20hor%C3%A1rios%20para%20atendimento%20em%20Manaus." target="_blank" rel="noopener noreferrer" class="btn-primary btn-whatsapp" style="width: 100%; justify-content: center;" aria-label="Consultar disponibilidade em Manaus">
-                  <span>Consultar Disponibilidade</span>
-                  <span class="btn-icon-circle">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                  </span>
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================
-         SEÇÃO 11: FAQ INTERATIVO (DÚVIDAS FREQUENTES)
-         ======================================================================== -->
-    <section id="faq" class="section" style="background-color: var(--color-alabaster);">
-      <div class="container container-narrow">
-        
-        <div class="text-center reveal-on-scroll">
-          <span class="eyebrow">Perguntas Frequentes</span>
-          <h2 class="section-title">Dúvidas Frequentes</h2>
-          <p class="section-subtitle mx-auto">
-            Transparência e clareza sobre como funciona o atendimento e o planejamento do seu tratamento.
-          </p>
-        </div>
-
-        <div class="faq-list">
-          
-          <!-- Item 1 -->
-          <div class="faq-item reveal-on-scroll stagger-1">
-            <button class="faq-trigger" aria-expanded="false">
-              <span>Como saber qual procedimento é indicado para mim?</span>
-              <span class="faq-icon-circle">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              </span>
-            </button>
-            <div class="faq-content">
-              <p>A avaliação presencial é o passo fundamental. Nela, a Dra. Andressa analisa suas proporções faciais, mímica muscular, qualidade de pele e ouve seus objetivos para desenhar um plano estritamente individualizado.</p>
-            </div>
-          </div>
-
-          <!-- Item 2 -->
-          <div class="faq-item reveal-on-scroll stagger-2">
-            <button class="faq-trigger" aria-expanded="false">
-              <span>Posso conversar e tirar dúvidas antes de agendar?</span>
-              <span class="faq-icon-circle">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              </span>
-            </button>
-            <div class="faq-content">
-              <p>Sim! Você pode entrar em contato diretamente pelo WhatsApp para tirar dúvidas sobre como funciona a consulta, verificar disponibilidade de horários e receber as orientações iniciais com total tranquilidade.</p>
-            </div>
-          </div>
-
-          <!-- Item 3 -->
-          <div class="faq-item reveal-on-scroll stagger-3">
-            <button class="faq-trigger" aria-expanded="false">
-              <span>O resultado fica realmente natural?</span>
-              <span class="faq-icon-circle">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              </span>
-            </button>
-            <div class="faq-content">
-              <p>A naturalidade é o pilar central da filosofia de atendimento da Dra. Andressa. O objetivo nunca é transformar você em outra pessoa, mas sim valorizar seus próprios traços, respeitando as proporções anatômicas e a sua idade biológica.</p>
-            </div>
-          </div>
-
-          <!-- Item 4 -->
-          <div class="faq-item reveal-on-scroll stagger-4">
-            <button class="faq-trigger" aria-expanded="false">
-              <span>Como funciona a consulta de avaliação?</span>
-              <span class="faq-icon-circle">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              </span>
-            </button>
-            <div class="faq-content">
-              <p>É uma consulta detalhada onde é realizado o mapeamento facial, histórico de saúde e alinhamento de expectativas. A Dra. Andressa explica detalhadamente cada possibilidade para que você tome decisões com clareza e segurança.</p>
-            </div>
-          </div>
-
-          <!-- Item 5 -->
-          <div class="faq-item reveal-on-scroll stagger-1">
-            <button class="faq-trigger" aria-expanded="false">
-              <span>Onde fica o consultório em Manaus?</span>
-              <span class="faq-icon-circle">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              </span>
-            </button>
-            <div class="faq-content">
-              <p>O atendimento é realizado em consultório estruturado em Manaus/AM, com ambiente climatizado, estacionamento e total privacidade. A localização exata e mapa de acesso são enviados na confirmação do seu horário.</p>
-            </div>
-          </div>
-
-          <!-- Item 6 -->
-          <div class="faq-item reveal-on-scroll stagger-2">
-            <button class="faq-trigger" aria-expanded="false">
-              <span>Como faço para agendar meu horário?</span>
-              <span class="faq-icon-circle">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              </span>
-            </button>
-            <div class="faq-content">
-              <p>Basta clicar em qualquer botão de WhatsApp nesta página ou entrar em contato pelo número (92) 98599-8869 para verificar as datas disponíveis e agendar sua avaliação.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================
-         SEÇÃO 12: CTA FINAL & FECHAMENTO EMOCIONAL
-         ======================================================================== -->
-    <section class="final-cta-section">
-      <div class="final-cta-glow"></div>
-      <div class="container" style="position: relative; z-index: 1;">
-        
-        <span class="eyebrow" style="background: rgba(182,141,115,0.2); border-color: rgba(182,141,115,0.4); color: var(--color-champagne-light);">
-          <span class="eyebrow-dot"></span>
-          Agende Sua Avaliação
-        </span>
-
-        <h2 class="final-cta-headline">
-          Sua autoestima merece acompanhar a mulher que <span class="italic-accent">você se tornou.</span>
-        </h2>
-
-        <p class="final-cta-text">
-          Comece por uma avaliação individualizada e entenda quais possibilidades fazem sentido para valorizar seus traços com segurança e naturalidade em Manaus.
-        </p>
-
-        <a href="https://wa.me/5592985998869?text=Ol%C3%A1%2C%20Dra.%20Andressa!%20Encontrei%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20para%20harmoniza%C3%A7%C3%A3o%20facial." target="_blank" rel="noopener noreferrer" class="btn-primary btn-whatsapp" style="padding: 0.85rem 0.85rem 0.85rem 2rem; font-size: 1.05rem;" aria-label="Quero agendar minha avaliação pelo WhatsApp">
-          <span>Quero agendar minha avaliação</span>
-          <span class="btn-icon-circle" style="width: 2.85rem; height: 2.85rem;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </span>
-        </a>
-
-        <div style="margin-top: 1.5rem; font-size: 0.82rem; color: rgba(248,243,238,0.65);">
-          Atendimento com hora marcada em Manaus • Agendamento facilitado via WhatsApp
-        </div>
-
-      </div>
-    </section>
-  </main>
-
-  <!-- ========================================================================
-       RODAPÉ INFORMATIVO & ÉTICO
-       ======================================================================== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        
-        <div class="footer-brand">
-          <h4>Dra. Maria Andressa Araújo</h4>
-          <p>Fisioterapeuta • Estética Avançada & Harmonização Facial</p>
-          <p style="color: rgba(248, 243, 238, 0.65); line-height: 1.6; max-width: 380px;">
-            Harmonização facial com foco em naturalidade, técnica, segurança e cuidado individualizado em Manaus – AM.
-          </p>
-        </div>
-
-        <div>
-          <h5 class="footer-title">Navegação Rápida</h5>
-          <div class="footer-links">
-            <a href="#hero" class="footer-link">Início</a>
-            <a href="#posicionamento" class="footer-link">Posicionamento</a>
-            <a href="#valorizar" class="footer-link">O que Valorizar</a>
-            <a href="#filosofia" class="footer-link">Filosofia de Cuidado</a>
-            <a href="#como-funciona" class="footer-link">Como Funciona</a>
-            <a href="#sobre" class="footer-link">Sobre a Dra. Andressa</a>
-            <a href="#faq" class="footer-link">Dúvidas Frequentes</a>
-          </div>
-        </div>
-
-        <div>
-          <h5 class="footer-title">Atendimento em Manaus</h5>
-          <div class="footer-links">
-            <span style="color: rgba(248, 243, 238, 0.8);">WhatsApp: (92) 98599-8869</span>
-            <span style="color: rgba(248, 243, 238, 0.8);">Atendimento com hora marcada</span>
-            <span style="color: rgba(248, 243, 238, 0.8);">Manaus – Amazonas</span>
-            <a href="https://wa.me/5592985998869?text=Ol%C3%A1%2C%20Dra.%20Andressa!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." target="_blank" rel="noopener noreferrer" style="color: var(--color-champagne); font-weight: 600; margin-top: 0.5rem; display: inline-block;">
-              Solicitar agendamento →
-            </a>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="footer-bottom">
-        <div>
-          © 2026 Dra. Maria Andressa Araújo. Todos os direitos reservados.
-        </div>
-        <div>
-          Site institucional em conformidade com as diretrizes éticas profissionais.
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ========================================================================
-       FLOATING WHATSAPP ACTION ISLAND (APPLE HAPTIC / FLOATING CHROME)
-       ======================================================================== -->
-  <a href="https://wa.me/5592985998869?text=Ol%C3%A1%2C%20Dra.%20Andressa!%20Encontrei%20seu%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20avalia%C3%A7%C3%A3o%20para%20harmoniza%C3%A7%C3%A3o%20facial." target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="Falar com a Dra. Andressa no WhatsApp">
-    <div class="floating-wa-text">
-      <span class="floating-wa-label">Avaliação Facial</span>
-      <span class="floating-wa-status">
-        <span class="status-dot"></span>
-        Online • Manaus
-      </span>
-    </div>
-    <div class="floating-wa-btn">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-    </div>
-  </a>
-
-  <!-- Scripts -->
-  <script src="assets/js/main.js"></script>
-</body>
-</html>
